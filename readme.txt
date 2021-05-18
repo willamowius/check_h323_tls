@@ -9,11 +9,15 @@ License: GPL (https://www.gnu.org/copyleft/gpl.html)
 
 To compile use H323Plus and PTLib and say "make optnoshared".
 
+Technically we are using "H.323 over H.460.17 over TLS" here, as supported by
+Innovaphone as "H.323/TLS" or in the GNU Gatekeeper with H.460.17 and TLS enabled.
+
 Usage: check_h323_tls [options] host
 
-Without options, the plugin will establish a TLS connection without a TLS certificate of its own.
-If the server requires a client certificate (like Innovaphone servers), you need to set
-it with --tls-cert, --tls-privkey and --tls-passphrase.
+Without options, the plugin will establish a TLS connection without a TLS certificate
+of it's own.  If the server requires a client certificate (like Innovaphone servers
+or GnuGk with RequireRemoteCertificate=1), you need to set it with --tls-cert,
+--tls-privkey and --tls-passphrase.
 
 Example:
 check_h323_tls --tls-cert /path/to/cert.pem --tls-privkey /path/to/key.pem --tls-passphrase secret 1.2.3.4
