@@ -6,7 +6,7 @@ PROG		= check_h323_tls
 SOURCES		:= check_h323_tls.cxx
 
 ifndef OPENH323DIR
-OPENH323DIR=$(CURDIR)/../..
+OPENH323DIR=$(HOME)/h323plus
 endif
 
 STDCCFLAGS += -Wno-unused-variable
