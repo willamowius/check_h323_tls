@@ -12,7 +12,7 @@
 #include "check_h323_tls.h"
 
 #ifndef H323_H46017
-#error("H.460.17 support In H323Plus required");
+#error("H.460.17 support in H323Plus required");
 #endif
 #ifndef H323_TLS
 #error("TLS support in H323Plus required");
